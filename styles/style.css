@@ -1,0 +1,59 @@
+body{
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.square{
+    width: 100px;
+    height: 100px;
+    background-color: rgb(33, 13, 144);
+    border: 1px solid gray;
+    display: inline-block;
+    
+}
+.o{
+    position: relative;
+}
+
+.o:after{
+    position: absolute;
+    content: "\2620"; 
+    font-size: 50px;
+    line-height: 100px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+.x{
+    position: relative;
+}
+
+.x:after{
+    position: absolute;
+    content: "\1F4A2"; 
+    font-size: 50px;
+    line-height: 100px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+input:hover{
+    color: white;
+    background-color: teal;
+}
+
+input{
+    background-color: honeydew;
+    padding: 10px;
+    color: black;
+    position: absolute;
+    left: 80px;
+    border-radius: 10px;
+    border: 1px solid gray;
+}
