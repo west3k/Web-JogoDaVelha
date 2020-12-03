@@ -4,7 +4,7 @@ body{
     text-align: center;
 }
 h1{
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:sans-serif;
 }
 .square{
     width: 100px;
@@ -12,7 +12,7 @@ h1{
     background-color: rgb(33, 13, 144);
     border: 1px solid gray;
     display: inline-block;
-    
+    border-radius: 5px
 }
 .o{
     position: relative;
@@ -44,16 +44,18 @@ h1{
     right: 0;
 }
 input:hover{
-    color: white;
+    color: black;
     background-color: teal;
+    font-family: cursive;
 }
 
 input{
     background-color: honeydew;
-    padding: 10px;
+    padding: 15px;
     color: black;
     position: absolute;
     left: 80px;
     border-radius: 10px;
-    border: 1px solid gray;
+    border: 0px solid gray;
+    transition: 0.2s;
 }

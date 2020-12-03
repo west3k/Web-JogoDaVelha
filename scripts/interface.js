@@ -1,12 +1,14 @@
 //após carregar o documento html, este evento é responsável por selecionar todos os elemntos html
-//com classe ".square" e incluir dentro de uma list, o foreach percorre a mesma, incluindo o click
-//que por sua vez inclui o acionamento a função handleClick
+//com classe ".square" e incluir dentro de uma list(squares), o foreach percorre a lista.
+//incluindo o evento de click que por sua vez inclui o acionamento a função handleClick
+
 document.addEventListener("DOMContentLoaded", () => {
     let squares = document.querySelectorAll(".square")
     squares.forEach((square) => {
         square.addEventListener('click', handleClick)
     })
 })
+
 //função responsável por acionar a função handlemove, mandando como parâmetro o id do elemento html
 //esse id = o position.
 //Após a execução do handleMove, acionamos a função update
@@ -25,7 +27,7 @@ function handleClick(event) {
             alert("Player " + player + " Win the Game Sequence " + sequenceWin )
         }, 10)
     }
-    updateSquare(event.target.id)
+    updateSquares(event.target.id)
 }
 
 //após o simbolo incluso na posição clicada no tabuleiro.
@@ -36,7 +38,7 @@ function handleClick(event) {
 //se o symbolo selecionado for = vazio então incluimos a tag div com a classe = ao simbolo.
 //tudo isso dentro da tag ou seja o square
 
-function updateSquare(position) {
+function updateSquares(position) {
     let square = document.getElementById(position.toString())
     symbol = board[square.id]
     square.innerHTML = `<div class='${symbol}'></div>`
